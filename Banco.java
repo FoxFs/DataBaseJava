@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-class banco{
+class Banco{
   int saldo;
+  Scanner Value = new Scanner(System.in);
 
   public void adicionar() {
-    Scanner Value = new Scanner(System.in);
     System.out.print("Quanto vocÊ quer adicionar?: ");
     int valor = Value.nextInt();
     saldo = saldo + valor;
@@ -12,7 +12,11 @@ class banco{
   }
 
   public void sacar() {
-    
+    System.out.print("Digite o quanto você quer sacar: ");
+    int valor1 = Value.nextInt();
+    saldo = saldo - valor1;
+    Value.close();
+    System.out.print("Valor adicionado");
   }
   
 }
